@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sameer's Portfolio</title>
+  <script src="https://kit.fontawesome.com/a2e8df4f8c.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .animated-bg {
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .fade-in {
+      animation: fadeIn 1.2s ease-out both;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    input, textarea {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body class="animated-bg text-white font-sans">
+  <!-- Header -->
+  <header class="bg-black/50 p-6 shadow-md fade-in">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="{{ url_for('static', filename='s2.jpeg') }}" alt="Logo" class="w-10 h-10 rounded-full shadow">
+        <h1 class="text-3xl font-bold">Mohammad Sameer Biradar</h1>
+      </div>
+      <a href="/download_resume"
+         class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-300 hover:text-blue-800 transition duration-300 ease-in-out">
+        Download Resume
+      </a>
+    </div>
+  </header>
+  
+  <!-- Profile Section -->
+  <section class="max-w-6xl mx-auto text-center mt-12 px-4 fade-in">
+    <img src="{{ url_for('static', filename='s1.jpeg') }}" alt="Profile Photo"
+         class="mx-auto rounded-full w-36 h-36 object-cover border-4 border-white shadow-lg mb-4">
+    <h2 class="text-3xl font-semibold">Hello! I'm Sameer 👋</h2>
+    <p class="mt-2 text-gray-300 text-lg">Aspiring Data Scientist | Python Developer | Tech Enthusiast</p>
+  
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-6 mt-4">
+      <!-- GitHub -->
+      <a href="https://github.com/SameerBiradar7" target="_blank" aria-label="GitHub"
+         class="transition hover:opacity-80">
+        <img src="{{ url_for('static', filename='GitHub.png') }}" alt="GitHub" class="w-8 h-8">
+      </a>
+  
+      <!-- Gmail -->
+      <a href="mailto:sameerrlsbca@gmail.com" aria-label="Gmail"
+         class="transition hover:opacity-80">
+        <img src="{{ url_for('static', filename='gmail.webp') }}" alt="Gmail" class="w-8 h-8">
+      </a>
+  
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/mohammad-sameer-biradar/" target="_blank" aria-label="LinkedIn"
+         class="transition hover:opacity-80">
+        <img src="{{ url_for('static', filename='linkedIn.webp') }}" alt="LinkedIn" class="w-8 h-8">
+      </a>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section class="max-w-6xl mx-auto mt-16 px-4 fade-in">
+    <h2 class="text-2xl font-semibold mb-6 border-b border-white pb-2">Skills</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+      <!-- Skill cards with icons -->
+      <div class="bg-white/10 backdrop-blur p-4 rounded shadow-md hover:scale-105 transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12 mx-auto mb-2">
+        <p>Python</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur p-4 rounded shadow-md hover:scale-105 transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-12 h-12 mx-auto mb-2">
+        <p>Java</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur p-4 rounded shadow-md hover:scale-105 transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="w-12 h-12 mx-auto mb-2">
+        <p>SQL</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur p-4 rounded shadow-md hover:scale-105 transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="w-12 h-12 mx-auto mb-2">
+        <p>Pandas</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur p-4 rounded shadow-md hover:scale-105 transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="w-12 h-12 mx-auto mb-2">
+        <p>NumPy</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur p-4 rounded shadow-md hover:scale-105 transition">
+        <img src="https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png" alt="AWS" class="w-12 h-12 mx-auto mb-2">
+        <p>AWS</p>
+      </div>
+      <!-- Android Studio -->
+      <div class="bg-white/10 backdrop-blur p-4 rounded shadow-md hover:scale-105 transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/2048px-Android_Studio_icon_%282023%29.svg.png" alt="Android Studio" class="w-12 h-12 mx-auto mb-2">
+        <p>Android Studio</p>
+      </div>
+  
+      <!-- Git -->
+      <div class="bg-white/10 backdrop-blur p-4 rounded shadow-md hover:scale-105 transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-12 h-12 mx-auto mb-2">
+        <p>Git</p>
+      </div>
+  
+      <!-- MongoDB -->
+      <div class="bg-white/10 backdrop-blur p-4 rounded shadow-md hover:scale-105 transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-12 h-12 mx-auto mb-2">
+        <p>MongoDB</p>
+      </div>
+  
+      <!-- PHP -->
+      <div class="bg-white/10 backdrop-blur p-4 rounded shadow-md hover:scale-105 transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="w-12 h-12 mx-auto mb-2">
+        <p>PHP</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="max-w-6xl mx-auto mt-16 px-4 fade-in">
+    <h2 class="text-2xl font-semibold mb-6 border-b border-white pb-2">Education</h2>
+    <div class="grid md:grid-cols-2 gap-8 text-left">
+      <div class="bg-white/10 backdrop-blur p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+        <h3 class="text-xl font-semibold mb-1">Master of Computer Applications (MCA)</h3>
+        <p class="text-gray-300 mb-1">KLE Society's College of Engineering and Technology</p>
+        <p class="text-gray-400 text-sm">2019 - 2022</p>
+        <p class="mt-2 text-gray-300">Specialized in software development, data structures, and algorithms.</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+        <h3 class="text-xl font-semibold mb-1">Bachelor of Computer Applications (BCA)</h3>
+        <p class="text-gray-300 mb-1">KLE Society's College of Engineering and Technology</p>
+        <p class="text-gray-400 text-sm">2016 - 2019</p>
+        <p class="mt-2 text-gray-300">Focused on programming fundamentals, database management, and web development.</p>
+      </div>
+    </div>
+  </section>
+   
+  <!-- Projects Section -->
+  <section class="mt-12 max-w-6xl mx-auto px-4 fade-in">
+    <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/20 pb-2">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Blood and Donor Management -->
+      <div class="bg-white/10 backdrop-blur p-6 rounded-lg shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+        <h3 class="text-xl font-semibold mb-2 text-white">Blood and Donor Management</h3>
+        <p class="mb-4 text-gray-200">
+          A web app that helps manage and search for blood donors based on blood group and area.
+          Focused on data handling and efficient search operations.
+        </p>
+        <a href="https://github.com/SameerBiradar7" target="_blank" class="text-blue-300 hover:underline">View on GitHub</a>
+      </div>
+      <!-- Swiggy Clone -->
+      <div class="bg-white/10 backdrop-blur p-6 rounded-lg shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+        <h3 class="text-xl font-semibold mb-2 text-white">Swiggy Clone</h3>
+        <p class="mb-4 text-gray-200">
+          A MERN-stack based replica of the Swiggy app featuring core functionalities and modern UI/UX.
+          Emphasis on responsive layout and dynamic content.
+        </p>
+        <a href="https://github.com/SameerBiradar7" target="_blank" class="text-blue-300 hover:underline">View on GitHub</a>
+      </div>
+      <!-- College Management App -->
+      <div class="bg-white/10 backdrop-blur p-6 rounded-lg shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+        <h3 class="text-xl font-semibold mb-2 text-white">College Management App</h3>
+        <p class="mb-4 text-gray-200">
+          An Android application facilitating student-teacher interactions, course updates, and information sharing.
+          Focused on mobile-first design and seamless usability.
+        </p>
+        <a href="https://github.com/SameerBiradar7" target="_blank" class="text-blue-300 hover:underline">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section with Form -->
+  <section class="max-w-3xl mx-auto mt-16 px-4 fade-in">
+    <h2 class="text-2xl font-semibold mb-6 border-b border-white pb-2">Contact Me</h2>
+    <form action="https://formspree.io/f/xwkzqkyz" method="POST" class="grid gap-4"> <!-- Replace with your Formspree ID -->
+      <input type="text" name="name" placeholder="Your Name" class="p-3 rounded shadow text-white" required>
+      <input type="email" name="email" placeholder="Your Email" class="p-3 rounded shadow text-white" required>
+      <textarea name="message" rows="5" placeholder="Your Message" class="p-3 rounded shadow text-white" required></textarea>
+      <button type="submit"
+        class="bg-blue-500 hover:bg-blue-600 transition px-4 py-2 rounded text-white font-semibold hover:scale-105 duration-300 ease-in-out">
+        Send Message
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center mt-20 p-6 text-gray-300 fade-in">
+    © {{ current_year }} Mohammad Sameer Biradar. All rights reserved.
+  </footer>
+</body>
+</html>
